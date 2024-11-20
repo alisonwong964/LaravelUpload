@@ -1,0 +1,115 @@
+:root {
+    --drop-area-bg: #f0f8ff;
+    --hover-bg: #e6f7ff;
+    --border-color: #007acc;
+    --text-color: #555;
+}
+
+#drop-area {
+    background-color: var(--drop-area-bg);
+    border: 2px dashed var(--border-color);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#drop-area.hover {
+    background-color: var(--hover-bg);
+}
+
+.file-preview {
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+#uploadButton {
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#uploadButton:hover {
+    background-color: #48a6ff;
+}
+
+
+/* Icon inside the preview box */
+.file-preview i, .file-preview img {
+font-size: 50px;
+margin-top: 10px;
+margin-bottom: 10px;
+max-width: 50px;
+max-height: 50px;
+}
+
+.filename-text {
+font-size: 12px;
+margin-top: 5px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+width: 100%;
+}
+
+.status-overlay {
+position: absolute;
+top: 5px;
+right: 5px;
+font-size: 16px;
+color: white;
+font-weight: bold;
+background-color: rgba(0, 128, 0, 0.5);
+border-radius: 50%;
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+pointer-events: none;
+z-index: 5;
+}
+
+
+.success {
+background-color: rgba(0, 128, 0, 0.7);
+}
+
+.failure {
+background-color: rgba(255, 0, 0, 0.7);
+}
+
+.remove-btn {
+    display: block;
+    margin-top: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    width: 80%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.remove-btn:hover {
+    background-color: #ff1a1a;
+}
